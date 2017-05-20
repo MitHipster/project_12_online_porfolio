@@ -8,29 +8,35 @@
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
-    <div class="top-bar">
-      <div class="top-bar-title">Tim Acker</div>
+    <div class="title-bar" data-responsive-toggle="navbar" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle="navbar"></button>
+      <div class="title-bar-title">Tim Acker</div>
+    </div>
+    <div class="top-bar" id="navbar" data-animate="hinge-in-from-top hinge-out-from-top">
+      <div class="top-bar-title hide-for-small-only">
+        <strong>Site Title</strong>
+      </div>
       <div class="top-bar-right">
         <ul class="dropdown menu" data-dropdown-menu>
-          <li><a href="#">About Me</a></li>
-          <li>
-            <a href="#">Connect</a>
-            <ul class="menu vertical">
-              <li><a href="#">Email</a></li>
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">LinkedIn</a></li>
-              <li><a href="#">Twitter</a></li>
-            </ul>
-          </li>
-          <li>
+          <li class="active"><a href="#">About Me</a></li>
+          <li class="is-dropdown-submenu-parent">
             <a href="#">Portfolio</a>
-            <ul class="menu vertical">
+            <ul class="menu">
               <li><a href="#">Project One</a></li>
               <li><a href="#">Project Two</a></li>
               <li><a href="#">Project Three</a></li>
               <li><a href="#">Project Four</a></li>
               <li><a href="#">Project Five</a></li>
               <li><a href="#">Project Six</a></li>
+            </ul>
+          </li>
+          <li class="is-dropdown-submenu-parent">
+            <a href="#">Connect</a>
+            <ul class="menu">
+              <li><a href="#">Email</a></li>
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">LinkedIn</a></li>
+              <li><a href="#">Twitter</a></li>
             </ul>
           </li>
         </ul>
