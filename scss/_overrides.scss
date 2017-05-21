@@ -8,3 +8,17 @@
 // 1. Navigation
 // -------------
 
+.sticky {
+  width: 100%;
+}
+
+.menu > li > a {
+  @include breakpoint(370px down) {
+    font-size: 0.9375rem;
+    padding: 0.7rem 0.45rem;
+  }
+}
+
+.menu .active {
+  font-weight: bold;
+}

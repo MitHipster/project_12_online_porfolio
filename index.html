@@ -8,43 +8,58 @@
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
-    <div class="title-bar" data-responsive-toggle="navbar" data-hide-for="medium">
-      <button class="menu-icon" type="button" data-toggle="navbar"></button>
-      <div class="title-bar-title">Tim Acker</div>
-    </div>
-    <div class="top-bar" id="navbar" data-animate="hinge-in-from-top hinge-out-from-top">
-      <div class="top-bar-title hide-for-small-only">
-        <strong>Site Title</strong>
-      </div>
-      <div class="top-bar-right">
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li class="actve"><a href="#"><i class="fi-torso"></i><span>About Me</span></a></li>
-          <li class="is-dropdown-submenu-parent">
-            <a href="#"><i class="fi-folder"></i><span>Portfolio</span></a>
-            <ul class="menu">
-              <li><a href="#">Project One</a></li>
-              <li><a href="#">Project Two</a></li>
-              <li><a href="#">Project Three</a></li>
-              <li><a href="#">Project Four</a></li>
-              <li><a href="#">Project Five</a></li>
-              <li><a href="#">Project Six</a></li>
+    <div data-sticky-container>
+      <div class="sticky" data-sticky data-sticky-on="small" data-margin-top="0">
+        <div class="title-bar" data-responsive-toggle="navbar" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle="navbar"></button>
+          <div class="title-bar-title">Tim Acker</div>
+        </div>
+        <div class="top-bar" id="navbar" data-animate="hinge-in-from-top hinge-out-from-top">
+          <div class="top-bar-title hide-for-small-only">
+            <strong>Tim Acker</strong>
+          </div>
+          <div class="top-bar-right" data-magellan data-bar-offset="24">
+            <ul class="dropdown menu" data-dropdown-menu>
+              <li><a href="#about-me"><i class="fi-torso"></i><span>About Me</span></a></li>
+              <li class="is-dropdown-submenu-parent">
+                <a href="#portfolio"><i class="fi-folder"></i><span>Portfolio</span></a>
+                <ul class="menu">
+                  <li><a href="#">Project One</a></li>
+                  <li><a href="#">Project Two</a></li>
+                  <li><a href="#">Project Three</a></li>
+                  <li><a href="#">Project Four</a></li>
+                  <li><a href="#">Project Five</a></li>
+                  <li><a href="#">Project Six</a></li>
+                </ul>
+              </li>
+              <li class="is-dropdown-submenu-parent">
+                <a href="#connect"><i class="fi-at-sign"></i><span>Connect</span></a>
+                <ul class="menu">
+                  <li><a href="mailto:tjacker31@gmail.com"><i class="fi-mail"></i><span>Email</span></a></li>
+                  <li><a href="https://github.com/MitHipster" target="_blank"><i class="fi-social-github"></i><span>GitHub</span></a></li>
+                  <li><a href="https://www.linkedin.com/in/tim-acker" target="_blank"><i class="fi-social-linkedin"></i><span>LinkedIn</span></a></li>
+                  <li><a href="https://twitter.com/MitHipster" target="_blank"><i class="fi-social-twitter"></i><span>Twitter</span></a></li>
+                </ul>
+              </li>
             </ul>
-          </li>
-          <li class="is-dropdown-submenu-parent">
-            <a href="#"><i class="fi-at-sign"></i><span>Connect</span></a>
-            <ul class="menu">
-              <li><a href="#"><i class="fi-mail"></i><span>Email</span></a></li>
-              <li><a href="#"><i class="fi-social-github"></i><span>GitHub</span></a></li>
-              <li><a href="#"><i class="fi-social-linkedin"></i><span>LinkedIn</span></a></li>
-              <li><a href="#"><i class="fi-social-twitter"></i><span>Twitter</span></a></li>
-            </ul>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </div>
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/what-input/dist/what-input.js"></script>
-    <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
-    <script src="js/app.js"></script>
+    
+    <div class="sections">
+      <section id="about-me" data-magellan-target="about-me"><h2>About Me Section</h2><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p></section>
+      <section id="portfolio" data-magellan-target="portfolio"><h2>Portfolio Section</h2><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p></section>
+      <section id="connect" data-magellan-target="connect"><h2>Connect Section</h2><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p></section>
+    </div>
+    
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/what-input/dist/what-input.min.js"></script>
+    <script src="bower_components/foundation-sites/dist/js/foundation.min.js"></script>
+    <script type="text/javascript">
+      $(document).foundation();
+    </script>
+<!--    <script src="js/app.js"></script>-->
+ 
   </body>
 </html>
