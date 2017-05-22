@@ -4,6 +4,7 @@
 //  Table of Contents:
 //
 //   1. Navigation
+//   2. Callout
 
 // 1. Navigation
 // -------------
@@ -22,3 +23,31 @@
 .menu .active {
   font-weight: bold;
 }
+
+// 2. Callout
+// -------------
+
+.callout {
+  z-index: -1;
+}
+
+.callout img {
+  width: 100px;
+  height: auto;
+}
+
+.parallax {
+	background-color: #0078A0;
+	height: 330px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: fixed;
+	width: 100%;
+}
+
+.sections {
+//	max-width: 100%;
+	position: relative;
+	top: 330px;
+	background-color: #fff;
+}   
