@@ -3,10 +3,38 @@
 //
 //  Table of Contents:
 //
-//   1. Navigation
-//   2. Callout
+//   1. Base Elements
+//   2. Navigation
+//   3. Callout
 
-// 1. Navigation
+// 2. Base Elements
+// -------------
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  position: relative;
+  top: $callout-height;
+}
+
+a {
+  opacity: 0.4;
+  transition: opacity 0.3s ease-out;
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
+// 2. Navigation
 // -------------
 
 .sticky {
@@ -14,9 +42,20 @@
 }
 
 .menu > li > a {
-  @include breakpoint(370px down) {
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  &.active {
+    font-weight: 700;
+    opacity: 1;
+  }
+  & span::first-letter {
     font-size: 0.9375rem;
-    padding: 0.7rem 0.45rem;
+  }
+  @include breakpoint(360px down) {
+    font-size: 0.9375rem;
+    padding: 0.7rem;
   }
 }
 
@@ -24,11 +63,11 @@
   font-weight: bold;
 }
 
-// 2. Callout
+// 3. Callout
 // -------------
 
 .callout {
-  z-index: -1;
+  z-index: -100;
 }
 
 .callout img {
@@ -36,18 +75,19 @@
   height: auto;
 }
 
-.parallax {
-	background-color: #0078A0;
-	height: 330px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: fixed;
-	width: 100%;
+.callout.fixed {
+  background-image: url("../img/panel.svg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: $callout-height;
+  position: fixed;
+  width: 100%;
 }
 
 .sections {
-//	max-width: 100%;
-	position: relative;
-	top: 330px;
-	background-color: #fff;
-}   
+//  max-width: 100%;
+  position: relative;
+  top: $callout-height;
+  background-color: #fff;
+}

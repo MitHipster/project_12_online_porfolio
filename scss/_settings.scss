@@ -56,14 +56,16 @@ $foundation-palette: (
   warning: #ffae00,
   alert: #cc4b37,
 );
-$light-gray: #e6e6e6;
+$light-gray: #d6d6d6; // #e6e6e6
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
-$body-background: $white;
+$black: #2b2b2b; // #0a0a0a
+$white: #f5f5f5; // #fefefe
+$medium-blue: #3b5aaa; // Custom
+$dark-blue: #16213e; // Custom
+$body-background: $medium-blue; // $white
 $body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: 'Cabin', sans-serif;;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -71,7 +73,7 @@ $global-weight-normal: normal;
 $global-weight-bold: bold;
 $global-radius: 0;
 $global-text-direction: ltr;
-$global-flexbox: true;
+$global-flexbox: true; // false
 $print-transparent-backgrounds: true;
 
 @include add-foundation-colors;
@@ -141,8 +143,8 @@ $code-font-weight: $global-weight-normal;
 $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
-$anchor-color: $primary-color;
-$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
+$anchor-color: $light-gray; // $primary-color
+//$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
@@ -272,16 +274,17 @@ $buttongroup-radius-on-each: true;
 // 13. Callout
 // -----------
 
-$callout-background: $white;
-$callout-background-fade: 85%;
-//$callout-border: 1px solid rgba($black, 0.25);
+$callout-background: $body-background; // $white
+$callout-background-fade: 0%;
+$callout-border: 1px solid rgba($black, 0.25);
 $callout-border: none;
 $callout-margin: 0 0 1rem 0;
 $callout-padding: 1rem;
-$callout-font-color: $body-font-color;
-$callout-font-color-alt: $body-background;
+$callout-font-color: $light-gray; // $body-font-color
+$callout-font-color-alt: $light-gray; // $body-background
 $callout-radius: $global-radius;
 $callout-link-tint: 30%;
+$callout-height: 600px; // Custom
 
 // 14. Card
 // --------
@@ -589,8 +592,8 @@ $thumbnail-radius: $global-radius;
 // 35. Title Bar
 // -------------
 
-$titlebar-background: $black;
-$titlebar-color: $white;
+$titlebar-background: $dark-blue; // $black
+$titlebar-color: $light-gray; // $white
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
 $titlebar-icon-color: $white;
@@ -614,7 +617,7 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0.5rem;
-$topbar-background: $light-gray;
+$topbar-background: $dark-blue; // $light-gray
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
