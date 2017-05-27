@@ -29,11 +29,11 @@ footer {
 }
 
 a {
-  opacity: 0.4;
+  opacity: 0.35;
   transition: opacity 0.3s ease-out;
   &:hover,
   &:focus {
-    opacity: 0.8;
+    opacity: 0.75;
   }
 }
 
@@ -53,16 +53,19 @@ a {
   border-bottom: 3px solid $dark-blue;
   transition: all 0.5s ease-out;
   &.active {
-    opacity: 1;
+    font-weight: bold;
+    opacity: 0.9;
+    border-bottom: 3px solid $medium-accent;
+    transition: all 0.5s ease-out;
   }
   & span::first-letter {
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
   }
   @include breakpoint(361px up) {
     font-size: 0.8125rem;
     padding: 1rem 0;
     & span::first-letter {
-      font-size: 0.9375rem;
+      font-size: 1.0125rem;
     }
   }
 }
@@ -74,14 +77,11 @@ a {
   }
 }
 
-.menu .active {
-  font-weight: bold;
-  border-bottom: 3px solid $medium-accent;
-  transition: all 0.5s ease-out;
-}
-
 .menu [class^="fi"]:before {
-  font-size: 0.9rem;
+  font-size: 0.9375rem;
+  @include breakpoint(361px up) {
+    font-size: 1.0125rem;
+  }
 }
 
 // 3. Callout
