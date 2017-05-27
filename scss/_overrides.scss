@@ -23,6 +23,9 @@ main {
 footer {
   position: relative;
   top: $callout-height;
+  @include breakpoint(medium up) {
+    top: $callout-height * 1.5;
+  }
 }
 
 a {
@@ -43,24 +46,42 @@ a {
 
 .menu > li > a {
   text-transform: uppercase;
-  font-size: 0.8125rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 700;
   letter-spacing: 0.05rem;
+  padding: 0.8125rem 0;
+  border-bottom: 3px solid $dark-blue;
+  transition: all 0.5s ease-out;
   &.active {
-    font-weight: 700;
     opacity: 1;
   }
   & span::first-letter {
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
   }
-  @include breakpoint(360px down) {
-    font-size: 0.9375rem;
-    padding: 0.7rem;
+  @include breakpoint(361px up) {
+    font-size: 0.8125rem;
+    padding: 1rem 0;
+    & span::first-letter {
+      font-size: 0.9375rem;
+    }
+  }
+}
+
+.menu > li:nth-child(2) a {
+  margin: 0 1.125rem;
+  @include breakpoint(361px up) {
+    margin: 0 1.625rem;
   }
 }
 
 .menu .active {
   font-weight: bold;
+  border-bottom: 3px solid $medium-accent;
+  transition: all 0.5s ease-out;
+}
+
+.menu [class^="fi"]:before {
+  font-size: 0.9rem;
 }
 
 // 3. Callout
@@ -76,13 +97,17 @@ a {
 }
 
 .callout.fixed {
-  background-image: url("../img/panel.svg");
+  background: url("../img/panel.svg"), linear-gradient(150deg, rgba($medium-blue, 1) 30%, rgba($dark-blue, 1) 80%);
+//  background-image: url("../img/panel.svg");
   background-position: top right;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   height: $callout-height;
   position: fixed;
   width: 100%;
+  @include breakpoint(medium up) {
+    height: $callout-height * 1.5;
+  }
 }
 
 .sections {
@@ -90,4 +115,7 @@ a {
   position: relative;
   top: $callout-height;
   background-color: #fff;
+  @include breakpoint(medium up) {
+    top: $callout-height * 1.5;
+  }
 }
