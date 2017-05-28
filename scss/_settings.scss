@@ -57,13 +57,15 @@ $foundation-palette: (
   alert: #cc4b37,
 );
 $light-gray: #d6d6d6; // #e6e6e6
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
+$medium-gray: darken($light-gray, 5%); // #cacaca
+$dark-gray: darken($light-gray, 30%); // #8a8a8a
 $black: #2b2b2b; // #0a0a0a
 $white: #f5f5f5; // #fefefe
 $medium-blue: #3b5aaa; // Custom
 $dark-blue: darken($medium-blue, 25%); // Custom #16213e
-$medium-accent: #de5360; // Custom
+$light-accent: #ea939b; // Custom
+$medium-accent: darken($light-accent, 15%); // Custom
+$dark-accent: darken($light-accent, 40%); // Custom
 $body-background: $medium-blue; // $white
 $body-font-color: $black;
 $body-font-family: 'Cabin', sans-serif;;
@@ -72,7 +74,7 @@ $global-margin: 1rem;
 $global-padding: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
-$global-radius: 0;
+$global-radius: 2px; // 0
 $global-text-direction: ltr;
 $global-flexbox: true; // false
 $print-transparent-backgrounds: true;
@@ -116,12 +118,12 @@ $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
   small: (
-    'h1': ('font-size': 24),
-    'h2': ('font-size': 20),
-    'h3': ('font-size': 19),
-    'h4': ('font-size': 18),
-    'h5': ('font-size': 17),
-    'h6': ('font-size': 16),
+    'h1': ('font-size': 28), // 24
+    'h2': ('font-size': 22), // 20
+    'h3': ('font-size': 20), // 19
+    'h4': ('font-size': 19), // 18
+    'h5': ('font-size': 18), // 17
+    'h6': ('font-size': 17), // 16
   ),
   medium: (
     'h1': ('font-size': 48),
@@ -133,7 +135,7 @@ $header-styles: (
   ),
 );
 $header-text-rendering: optimizeLegibility;
-$small-font-size: 85%; // 80%
+$small-font-size: 87.5%; // 80%
 $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
@@ -199,16 +201,16 @@ $input-error-font-weight: $global-weight-bold;
 // 7. Accordion
 // ------------
 
-$accordion-background: $white;
-$accordion-plusminus: true;
-$accordion-title-font-size: rem-calc(12);
-$accordion-item-color: $primary-color;
-$accordion-item-background-hover: $light-gray;
-$accordion-item-padding: 1.25rem 1rem;
-$accordion-content-background: $white;
-$accordion-content-border: 1px solid $light-gray;
-$accordion-content-color: $body-font-color;
-$accordion-content-padding: 1rem;
+$accordion-background: transparent; // $white
+$accordion-plusminus: false; // true
+$accordion-title-font-size: rem-calc(16); // 12
+$accordion-item-color: $light-gray; // $primary-color
+$accordion-item-background-hover: none; // $light-gray
+$accordion-item-padding: 0.5rem 0; // 1.25rem 1rem
+$accordion-content-background: transparent; // $white
+$accordion-content-border: none; // 1px solid $light-gray
+$accordion-content-color: $light-gray; // $body-font-color
+$accordion-content-padding: 0 0 0 0.8125rem; // 1rem
 
 // 8. Accordion Menu
 // -----------------
@@ -426,9 +428,9 @@ $menu-border: $light-gray;
 // 23. Meter
 // ---------
 
-$meter-height: 1rem;
+$meter-height: 1.25rem; // 1rem
 $meter-radius: $global-radius;
-$meter-background: $medium-gray;
+$meter-background: $light-accent; // $medium-gray
 $meter-fill-good: $success-color;
 $meter-fill-medium: $warning-color;
 $meter-fill-bad: $alert-color;
@@ -485,10 +487,10 @@ $pagination-arrows: true;
 // 27. Progress Bar
 // ----------------
 
-$progress-height: 1rem;
-$progress-background: $medium-gray;
+$progress-height: $meter-height; // 1rem
+$progress-background: $light-accent; // $medium-gray
 $progress-margin-bottom: $global-margin;
-$progress-meter-background: $primary-color;
+$progress-meter-background: $medium-accent; // $primary-color
 $progress-radius: $global-radius;
 
 // 28. Responsive Embed
