@@ -67,7 +67,7 @@ $light-accent: #eda1a8; // Custom
 $medium-accent: darken($light-accent, 15%); // Custom
 $dark-accent: darken($light-accent, 40%); // Custom
 $medium-portfolio: #5b5398; // Custom
-$dark-portfolio: darken($medium-portfolio, 10%); // Custom
+$dark-portfolio: darken($medium-portfolio, 15%); // Custom
 $body-background: $medium-blue; // $white
 $body-font-color: $black;
 $body-font-family: 'Cabin', sans-serif;;
@@ -137,7 +137,7 @@ $header-styles: (
   ),
 );
 $header-text-rendering: optimizeLegibility;
-$small-font-size: 87.5%; // 80%
+$small-font-size: 85%; // 80%
 $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
@@ -250,11 +250,11 @@ $breadcrumbs-item-slash: true;
 $button-padding: 0.85em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
-$button-background: $primary-color;
-$button-background-hover: scale-color($button-background, $lightness: -15%);
-$button-color: $white;
-$button-color-alt: $black;
-$button-radius: $global-radius;
+$button-background: $medium-portfolio; // $primary-color
+$button-background-hover: $dark-portfolio; //scale-color($button-background, $lightness: -15%);
+$button-color: $light-gray; // $white
+$button-color-alt: $light-gray; // $black
+$button-radius: 20px; // $global-radius
 $button-sizes: (
   tiny: 0.6rem,
   small: 0.75rem,
@@ -263,9 +263,9 @@ $button-sizes: (
 );
 $button-palette: $foundation-palette;
 $button-opacity-disabled: 0.25;
-$button-background-hover-lightness: -20%;
-$button-hollow-hover-lightness: -50%;
-$button-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+$button-background-hover-lightness: 0%; // -20%
+$button-hollow-hover-lightness: 0%; // -50%
+$button-transition: background-color 0.4s ease-out, color 0.4s ease-out; // background-color 0.25s ease-out, color 0.25s ease-out;
 
 // 12. Button Group
 // ----------------
