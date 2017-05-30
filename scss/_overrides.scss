@@ -9,6 +9,7 @@
 //   4. Accordion
 //   5. Progress Bar
 //   6. Projects
+//   7. Devices
 
 // 1. Base Elements
 // -------------
@@ -30,6 +31,11 @@ main {
     top: $callout-height * 1.5;
   }
 }
+
+//figure {
+//  position: relative;
+//  top: 0;
+//}
 
 footer {
   position: relative;
@@ -127,10 +133,13 @@ a {
   #name, #title {
     font-weight: 700;
   }
-  #name span {
+  #name {
+    line-height: 1.2;
+    span {
     color: $dark-blue;
-    &.backslash {
-      color: $medium-accent;
+      &.backslash {
+        color: $medium-accent;
+      }
     }
   }
   #title {
@@ -190,6 +199,20 @@ a {
   }
 }
 
+.skills-key {
+  p {
+    font-size: rem-calc(12);
+    font-weight: 700;
+    @include breakpoint(medium up) {
+      font-size: rem-calc(13);
+    }
+  }
+  .line {
+    height: 10px;
+    border-bottom: 2px solid $medium-gray;
+  }
+}
+
 // 5. Progress Bar
 // ----------------
 
@@ -219,14 +242,17 @@ a {
 // 6. Projects
 // ----------------
 
+#portfolio {
+  background-color: $medium-portfolio;
+}
+
 .projects {
-  &:nth-child(odd) {
-    background: linear-gradient(to right, rgba($dark-portfolio, 1) 0%, rgba($medium-portfolio, 1) 100%);
-  }
-  &:nth-child(even) {
-    background: linear-gradient(to right, rgba($medium-portfolio, 1) 0%, rgba($dark-portfolio, 1) 100%);
-  }
+  min-height: 400px;
   padding: 2rem 1rem;
+  border-bottom: 2px solid rgba($medium-gray, 0.2);
+  @include breakpoint(medium up) {
+    padding: 2rem 3rem;
+  }
   h4 {
     font-weight: 700;
     margin: 1rem 0;
@@ -235,3 +261,17 @@ a {
     opacity: 0.5;
   }
 }
+
+// 6. Devices
+// ----------------
+
+.device-container-desktop {
+  max-width: 400px;
+}
+
+.device-container-phone {
+  max-width: 160px;
+}
+
+
+
