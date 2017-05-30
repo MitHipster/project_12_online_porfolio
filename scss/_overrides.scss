@@ -32,11 +32,6 @@ main {
   }
 }
 
-//figure {
-//  position: relative;
-//  top: 0;
-//}
-
 footer {
   position: relative;
   top: $callout-height;
@@ -128,6 +123,9 @@ a {
   }
   @include breakpoint(medium up) {
     height: $callout-height * 1.5;
+    padding: 3rem 2rem;
+  }
+  @include breakpoint(xlarge up) {
     padding: 3rem;
   }
   #name, #title {
@@ -248,11 +246,15 @@ a {
 
 .projects {
   min-height: 400px;
-  padding: 2rem 1rem;
   border-bottom: 2px solid rgba($medium-gray, 0.2);
-  @include breakpoint(medium up) {
-    padding: 2rem 3rem;
+  padding: 2rem 1rem;
+  @include breakpoint(480px up) {
+    padding: 2rem;
   }
+  @include breakpoint(xlarge up) {
+    padding: 3rem;
+  }
+  
   h4 {
     font-weight: 700;
     margin: 1rem 0;
@@ -269,8 +271,16 @@ a {
   max-width: 400px;
 }
 
-.device-container-phone {
+.device-container-laptop {
+  max-width: 400px;
+}
+
+.device-container-phone-port {
   max-width: 160px;
+}
+
+.device-container-tablet-port {
+  max-width: 230px;
 }
 
 
