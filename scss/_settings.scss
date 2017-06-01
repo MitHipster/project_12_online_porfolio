@@ -65,7 +65,6 @@ $medium-blue: #4c69b1; // Custom
 $dark-blue: darken($medium-blue, 20%); // Custom
 $light-accent: #eda1a8; // Custom
 $medium-accent: darken($light-accent, 15%); // Custom
-$dark-accent: darken($light-accent, 40%); // Custom
 $medium-portfolio: #5b5398; // Custom
 $dark-portfolio: darken($medium-portfolio, 15%); // Custom
 $medium-connect: #439292; // Custom
@@ -125,7 +124,7 @@ $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
   small: (
-    'h1': ('font-size': 28), // 24
+    'h1': ('font-size': 30), // 24
     'h2': ('font-size': 22), // 20
     'h3': ('font-size': 20), // 19
     'h4': ('font-size': 19), // 18

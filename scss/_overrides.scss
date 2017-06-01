@@ -77,10 +77,20 @@ main {
 
 footer {
   position: relative;
-  height: 150px;
+  height: 100px;
   top: $callout-height;
+  background-color: $dark-connect;
+  @include padding-row();
   @include breakpoint(medium up) {
     top: $callout-height * 1.5;
+  }
+  @include breakpoint(xlarge up) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  small {
+    line-height: 36px;
+    opacity: 0.4;
   }
 }
 
@@ -151,10 +161,6 @@ h4 {
 // 3. Callout
 // -------------
 
-.callout {
-//  z-index: -100;
-}
-
 .callout img {
   width: 100px;
   height: auto;
@@ -179,10 +185,10 @@ h4 {
       padding: 2rem;
     }
     @include breakpoint(medium up) {
-      padding: 3rem 2rem;
+      padding: 6rem 2rem 0;
     }
     @include breakpoint(xlarge up) {
-      padding: 3rem;
+      padding: 6rem 3rem 0;
     }
   }
   #name, #title {
