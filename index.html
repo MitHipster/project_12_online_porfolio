@@ -12,11 +12,11 @@
   <body>
     <div data-sticky-container>
       <div class="sticky" data-sticky data-sticky-on="small" data-margin-top="0">
-        <div class="top-bar" id="navbar" data-magellan data-bar-offset="24">
+        <div class="top-bar" id="navbar" data-magellan data-bar-offset="18">
           <ul class="menu align-center">
-            <li class="sr-link"><a href="#about-me"><i class="fi-torso"></i><span>About Me</span></a></li>
-            <li class="sr-link"><a href="#portfolio"><i class="fi-folder"></i><span>Portfolio</span></a></li>
-            <li class="sr-link"><a href="#connect"><i class="fi-at-sign"></i><span>Connect</span></a></li>
+            <li class="sr-link" style="visibility: hidden;"><a href="#about-me"><i class="fi-torso"></i><span>About Me</span></a></li>
+            <li class="sr-link" style="visibility: hidden;"><a href="#portfolio"><i class="fi-folder"></i><span>Portfolio</span></a></li>
+            <li class="sr-link" style="visibility: hidden;"><a href="#connect"><i class="fi-at-sign"></i><span>Connect</span></a></li>
           </ul> <!-- End menu -->
         </div> <!-- End top-bar -->
       </div> <!-- End sticky -->
@@ -24,7 +24,7 @@
     <div id="about-me" data-magellan-target="about-me">
       <section class="callout large fixed">
         <div class="row">
-          <div class="columns sr-name-title">
+          <div class="columns sr-name-title" style="visibility: hidden;">
             <h1 id="name"><span>&lt;<span class="backslash">&sol;</span>&gt;</span>Tim Acker</h1>
             <h3 id="title">Front End Web Developer</h3>
             <ul class="accordion" data-accordion data-allow-all-closed="true">
@@ -122,7 +122,7 @@
     <main>
       <section id="portfolio" data-magellan-target="portfolio">
         <div class="row align-spaced align-middle projects">
-          <div class="columns small-12 large-6 sr-port-img">
+          <div class="columns small-12 large-6 sr-port-img" style="visibility: hidden;">
             <div class="device-container-desktop">
               <div class="device-mockup" data-device="imac" data-orientation="portrait" data-color="black">
                 <div class="device">
@@ -133,7 +133,7 @@
               </div> <!-- End device-mockup -->
             </div> <!-- End device-container -->
           </div> <!-- End columns -->
-          <div class="columns sr-port-desc-r">
+          <div class="columns sr-port-desc-r" style="visibility: hidden;">
             <h4><i class="fi-graph-pie"></i>Web App Dashboard</h4>
             <p>An interactive dashboard for a web application using advanced web techniques including JavaScript programming with Chart.js library and SVG graphics. The site involved creating charts and graphics along with user interactivity and usability components.</p>
             <a href="https://mithipster.github.io/project_9_web_app_dashboard/" class="hollow button" target="_blank">Visit Site</a>
@@ -141,7 +141,7 @@
           </div> <!-- End columns -->
         </div> <!-- End row -->
         <div class="row align-spaced align-middle projects">
-          <div class="columns small-12 large-6 large-order-2 sr-port-img">
+          <div class="columns small-12 large-6 large-order-2 sr-port-img" style="visibility: hidden;">
             <div class="device-container-laptop">
               <div class="device-mockup" data-device="macbook" data-orientation="portrait" data-color="black">
                 <div class="device">
@@ -152,7 +152,7 @@
               </div> <!-- End device-mockup -->
             </div> <!-- End device-container -->
           </div> <!-- End columns -->
-          <div class="columns sr-port-desc-l">
+          <div class="columns sr-port-desc-l" style="visibility: hidden;">
             <h4><i class="fi-social-spotify"></i>Spotify API</h4>
             <p>JavaScript programming and multiple AJAX requests were used to generate a gallery of album images and information, including tracks with samples, by submitting a search term to Spotify's API.</p>
             <small>* As of May 29, 2017, Spotify no longer allows public access to their API. Please view code and screenshots instead.</small>
@@ -160,7 +160,7 @@
           </div> <!-- End columns -->
         </div> <!-- End row -->
         <div class="row align-spaced align-middle projects">
-          <div class="columns small-12 large-4 sr-port-img">
+          <div class="columns small-12 large-4 sr-port-img" style="visibility: hidden;">
             <div class="device-container-phone-port">
               <div class="device-mockup" data-device="iphone6" data-orientation="portrait" data-color="white">
                 <div class="device">
@@ -171,7 +171,7 @@
               </div> <!-- End device-mockup -->
             </div> <!-- End device-container -->
           </div> <!-- End columns -->
-          <div class="columns sr-port-desc-r">
+          <div class="columns sr-port-desc-r" style="visibility: hidden;">
             <h4><i class="fi-clipboard-notes"></i>Online Registration Form</h4>
             <p>A responsive, mobile-friendly registration form using a variety of form input types and attributes, fully customized using HTML5 validation.</p>
             <a href="https://mithipster.github.io/project_3_registration_form/" class="hollow button" target="_blank">Visit Site</a>
@@ -179,7 +179,7 @@
           </div> <!-- End columns -->
         </div> <!-- End row -->
         <div class="row align-spaced align-middle projects">
-          <div class="columns small-12 large-4 large-order-2 sr-port-img">
+          <div class="columns small-12 large-4 large-order-2 sr-port-img" style="visibility: hidden;">
             <div class="device-container-tablet-port">
               <div class="device-mockup" data-device="ipad_air_2" data-orientation="portrait" data-color="black">
                 <div class="device">
@@ -190,7 +190,7 @@
               </div> <!-- End device-mockup -->
             </div> <!-- End device-container -->
           </div> <!-- End columns -->
-          <div class="columns sr-port-desc-l">
+          <div class="columns sr-port-desc-l" style="visibility: hidden;">
             <h4><i class="fi-wheelchair"></i>Accessibility Refactor</h4>
             <p>Enhanced an existing website, making it accessible to user with disabilites by following W3C's Web Accessibility Initiative (WAI) and using Google's Accessibility Developer Tools.</p>
             <a href="https://mithipster.github.io/project_8_accessibility_refactor/" class="hollow button" target="_blank">Visit Site</a>
@@ -198,7 +198,7 @@
           </div> <!-- End columns -->
         </div> <!-- End row -->
         <div class="row align-spaced align-middle projects">
-          <div class="columns small-12 large-6 sr-port-img">
+          <div class="columns small-12 large-6 sr-port-img" style="visibility: hidden;">
             <div class="device-container-laptop">
               <div class="device-mockup" data-device="macbook" data-orientation="portrait" data-color="black">
                 <div class="device">
@@ -209,7 +209,7 @@
               </div> <!-- End device-mockup -->
             </div> <!-- End device-container -->
           </div> <!-- End columns -->
-          <div class="columns sr-port-desc-r">
+          <div class="columns sr-port-desc-r" style="visibility: hidden;">
             <h4><i class="fi-play-video"></i>Interactive Video Player</h4>
             <p>Customized a video player using MediaElement's JavaScript library and HTML5 Video API. Users can follow along with the highlighted transcript below and navigate the video by clicking the text.</p>
             <a href="https://mithipster.github.io/project_7_video_player/" class="hollow button" target="_blank">Visit Site</a>
@@ -217,7 +217,7 @@
           </div> <!-- End columns -->
         </div> <!-- End row -->
         <div class="row align-spaced align-middle projects">
-          <div class="columns small-12 large-6 large-order-2 sr-port-img">
+          <div class="columns small-12 large-6 large-order-2 sr-port-img" style="visibility: hidden;">
             <div class="device-container-desktop">
               <div class="device-mockup" data-device="imac" data-orientation="portrait" data-color="black">
                 <div class="device">
@@ -228,7 +228,7 @@
               </div> <!-- End device-mockup -->
             </div> <!-- End device-container -->
           </div> <!-- End columns -->
-          <div class="columns sr-port-desc-l">
+          <div class="columns sr-port-desc-l" style="visibility: hidden;">
             <h4><i class="fi-photo"></i>Photo Gallery</h4>
             <p>Created an interactive photo gallery using JavaScript that searches photo captions in real-time, fading images in and out based on search term. Photos are displayed using a lightbox plugin customized to match the site's color scheme.</p>
             <a href="https://mithipster.github.io/project_4_photo_gallery/" class="hollow button" target="_blank">Visit Site</a>
@@ -239,13 +239,13 @@
       
       <section id="connect" data-magellan-target="connect">
         <div class="row">
-          <div class="columns">
+          <div class="columns sr-get-in-touch" style="visibility: hidden;">
             <h4>Get In Touch</h4>
             <p>If you appreciate my work and are looking for a Front End Web Developer, I'm available. Please connect with me using any of the options below. You can also view other projects I completed on GitHub. I look forward to hearing from you.</p>
           </div> <!-- End columns -->
         </div> <!-- End row --> 
         <div class="row">
-          <div class="columns small-12 xlarge-8 contact-message">
+          <div class="columns small-12 xlarge-8 contact-message sr-form" style="visibility: hidden;">
             <form action="https://formspree.io/tjacker31@gmail.com" method="POST">
               <div class="row">
                 <div class="columns small-12 medium-6">
@@ -266,7 +266,7 @@
               <button id="clear-btn" class="button hollow" type="reset">Clear</button>
             </form>
           </div> <!-- End columns -->
-          <div class="columns xlarge-4 contact-info">
+          <div class="columns xlarge-4 contact-info sr-contact" style="visibility: hidden;">
             <div>
               <p>Location</p>
               <address>

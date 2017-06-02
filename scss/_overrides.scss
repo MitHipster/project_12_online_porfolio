@@ -299,7 +299,9 @@ h4 {
   min-height: 400px;
   border-bottom: 2px solid rgba($medium-gray, 0.2);
   @include padding-row();
-  
+  &:last-child {
+    border-bottom: none;
+  }
   p {
     opacity: $text-opacity;
     font-weight: 500;
