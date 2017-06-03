@@ -4,24 +4,24 @@
 
 // Default overrides for all ScrollReveal elements
 const defaults = {
-  origin: 'left',
+  origin: 'bottom',
   duration: 1000,
   delay: 300,
-  distance: '30%',
-  viewFactor: 0.6,
+  distance: '20%',
+  viewFactor: 0.4,
   viewOffset: {
     top: 50
   }
 };
 
 // Default interval for nav links
-const defaultInterval = 300;
+const defaultInterval = 200;
 
 // Nav Link options
 const srLink = {
   container: '.sticky',
   origin: 'top',
-  duration: 1000,
+  duration: 600,
   scale: 1,
   viewOffset: {
     top: 0
@@ -30,28 +30,9 @@ const srLink = {
 
 // Callout options
 const srNameTitle = {
-  duration: 600,
+  origin: 'left',
+  duration: 800,
   delay: 0
-};
-
-// Portfolio image options
-const srPortImg = {
-  origin: 'bottom'
-};
-
-// Portfolio descriptions options for right side layout. Left side layout uses default settings
-const srPortDescRight = {
-  origin: 'right'
-};
-
-// Get In Touch options
-const srGetInTouch = {
-  origin: 'bottom'
-};
-
-// Contact Info options. Message form uses default options
-const srContact = {
-  origin: 'right'
 };
 
 // Initialize ScrollReveal
@@ -59,9 +40,7 @@ window.sr = ScrollReveal(defaults);
 // Call ScrollReveal passing container and custom / default options
 sr.reveal('.sr-link', srLink, defaultInterval);
 sr.reveal('.sr-name-title', srNameTitle);
-sr.reveal('.sr-port-img', srPortImg);
-sr.reveal('.sr-port-desc-r', srPortDescRight);
-sr.reveal('.sr-port-desc-l');
-sr.reveal('.sr-get-in-touch', srGetInTouch);
+sr.reveal('.sr-project');
+sr.reveal('.sr-get-in-touch');
 sr.reveal('.sr-form');
-sr.reveal('.sr-contact', srContact);
+sr.reveal('.sr-contact');
