@@ -1,9 +1,6 @@
 /*jslint esversion: 6, browser: true*/
 /*global window, console, $, jQuery, ScrollReveal, sr, alert*/
 
-//$(document).foundation();
-
-
 
 // Default overrides for all ScrollReveal elements
 const defaults = {

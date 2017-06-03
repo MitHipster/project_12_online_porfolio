@@ -62,29 +62,19 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  max-width: 100vw;
+  overflow-x: hidden;
   letter-spacing: 0.02rem;
   color: $light-gray;
 }
 
 main {
   flex-grow: 1;
-  position: relative;
-  top: $callout-height;
-  @include breakpoint(medium up) {
-    top: $callout-height * 1.5;
-  }
 }
 
 footer {
-  position: relative;
   height: 100px;
-  top: $callout-height;
   background-color: $dark-connect;
   @include padding-row();
-  @include breakpoint(medium up) {
-    top: $callout-height * 1.5;
-  }
   @include breakpoint(xlarge up) {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -162,9 +152,8 @@ h4 {
 // 3. Callout
 // -------------
 
-.callout.fixed {
-  position: fixed;
-  width: 100vw;
+.callout.large {
+  width: 100%;
   height: $callout-height;
   background: url("../img/panel.svg"), linear-gradient(150deg, rgba($medium-blue, 1) 30%, rgba($dark-blue, 1) 80%);
   background-position: top right;
