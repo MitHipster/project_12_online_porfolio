@@ -218,6 +218,9 @@ h4 {
     font-weight: 500;
     margin-bottom: 0.5rem;
     @include font-sizes();
+    @include breakpoint(medium up) {
+      margin-left: 3px;
+    }
     span {
       opacity: $text-opacity;
     }
